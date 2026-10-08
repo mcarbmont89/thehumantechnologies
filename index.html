@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Human Technologies — Sepa qué pasa en su línea de producción, mientras ocurre</title><meta name="description" content="Captura automática de producción, paros y calidad para manufactura. Su equipo deja de anotar y empieza a analizar; finanzas decide con reportes al instante. Guatemala.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--brand:#1E73BE;--green:#6AC14C;--green-ink:#3E8A22;--bg:#FAFCFE;--surface:#FFFFFF;--soft:#E7F2FA;--ink:#1F2933;--muted:#52606D;--line:#D8E4F1}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h2{font-size:clamp(30px,4.4vw,48px);max-width:20ch}
+.lead{color:var(--muted);max-width:60ch;margin-top:18px;font-size:18px}
+.alt{background:var(--soft)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--brand);color:#fff;border-bottom:1px solid rgba(255,255,255,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:18px}
+.nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.9}.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#0B2410;font:inherit;font-weight:600;text-decoration:none;padding:14px 24px;border-radius:99px;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#7FCB63;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7)}.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.nav .btn{padding:10px 18px;font-size:15px}
+@media(max-width:1000px){.nav ul{display:none}}
+.hero{background:var(--brand);color:#fff;padding:72px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.16) 2px,transparent 2.5px);background-size:34px 34px;-webkit-mask-image:linear-gradient(100deg,#000 0%,transparent 60%);mask-image:linear-gradient(100deg,#000 0%,transparent 60%)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(38px,5.6vw,68px)}
+.hero .sub{margin-top:22px;font-size:19px;color:#EAF3FC;max-width:56ch}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"✓";color:var(--green-ink);font-weight:700;flex:none;width:20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.card h3{font-size:23px;margin-bottom:10px}.card p{color:var(--muted);font-size:16px}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;margin-bottom:18px}
+.card .ic svg{width:24px;height:24px;stroke:var(--brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+.big{background:var(--brand);color:#fff;text-align:center;padding:96px 0}
+.big h2{margin:0 auto;max-width:20ch}.big p{margin:20px auto 0;max-width:58ch;color:#EAF3FC;font-size:19px}
+.contact{background:var(--soft)}
+.contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}.contact h2{max-width:14ch}
+form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+textarea{min-height:90px;resize:vertical}form .btn{width:100%}
+.ok{display:none;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:40px 30px;text-align:center}.ok h3{font-size:28px;margin-bottom:8px}
+@media(max-width:900px){.contact .grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+footer{background:var(--brand);color:#EAF3FC;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:#fff}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+.hero.a{text-align:center;padding-bottom:0}
+.hero.a h1{max-width:18ch;margin:0 auto}.hero.a .sub{margin-left:auto;margin-right:auto}.hero.a .cta-row{justify-content:center}
+.cmp{position:relative;margin:48px auto 0;max-width:980px;aspect-ratio:16/9;border-radius:22px 22px 0 0;overflow:hidden;touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none;box-shadow:0 -10px 50px rgba(0,0,0,.18)}
+.cmp .layer{position:absolute;inset:0}.cmp .layer svg,.cmp .layer img{width:100%;height:100%;object-fit:cover;display:block}
+.cmp .before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.35)}
+.cmp .knob{position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 4px 16px rgba(0,0,0,.3);color:var(--brand);font-weight:700}
+.cmp .tag{position:absolute;bottom:16px;padding:8px 14px;border-radius:99px;font-weight:600;font-size:14px;background:rgba(15,30,50,.72);color:#fff}
+.cmp .tag.l{left:16px}.cmp .tag.r{right:16px;background:var(--green);color:#0B2410}
+.cap{background:var(--surface);border:1px solid var(--line);border-top:0;max-width:980px;margin:0 auto;padding:16px 24px;text-align:center;color:var(--muted);font-size:15px;border-radius:0 0 22px 22px}
+.dark-sec{padding-top:56px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.who{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px}
+.who small{display:block;font-weight:600;color:var(--brand);margin-bottom:10px}
+.who h3{font-size:25px;margin-bottom:10px}.who p{color:var(--muted)}
+@media(max-width:900px){.three{grid-template-columns:1fr}}
+.q{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:44px}
+.q div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;font-family:"Bricolage Grotesque";font-size:21px;line-height:1.25}
+.q div::after{content:"Está en sus datos.";display:block;font-family:"Figtree";font-size:14.5px;font-weight:600;color:var(--green-ink);margin-top:8px}
+@media(max-width:700px){.q{grid-template-columns:1fr}}
+.pillars{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+.pillars span{border:1.5px solid rgba(255,255,255,.6);border-radius:99px;padding:9px 18px;font-weight:600;font-size:15.5px}
+
+.hero.c .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero.c .wrap{grid-template-columns:1fr}}
+.calc{background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.22)}
+.calc h3{font-size:24px;margin-bottom:6px}.calc>p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.calc label{margin-bottom:14px}
+.calc .out{background:var(--soft);border-radius:14px;padding:18px;margin-top:6px}
+.calc .out small{display:block;color:var(--muted);font-size:13.5px}
+.calc .out b{display:block;font-family:"Bricolage Grotesque";font-size:32px;line-height:1.1;margin-top:2px}
+.calc .out .g{color:var(--green-ink)}
+.calc input[type=range]{padding:0;accent-color:var(--brand)}
+.calc .fine{font-size:12.5px;color:var(--muted);margin-top:12px}
+.benefit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+@media(max-width:900px){.benefit{grid-template-columns:1fr}}
+.audi{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.audi span{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:9px 18px;font-weight:600}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.steps3 div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.steps3 .k{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;margin-bottom:16px}
+.steps3 h3{font-size:23px;margin-bottom:8px}.steps3 p{color:var(--muted)}
+@media(max-width:900px){.steps3{grid-template-columns:1fr}}
+.faq{max-width:780px;margin-top:36px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:24px;line-height:1;color:var(--brand);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}details p{margin-top:12px;color:var(--muted);max-width:62ch}
+
+.case{display:grid;grid-template-columns:1.1fr 1fr;gap:0;margin-top:40px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.case .nums{background:var(--brand);color:#fff;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.case .nums div b{display:block;font-family:"Bricolage Grotesque";font-size:clamp(44px,6vw,64px);line-height:1;letter-spacing:-.03em}
+.case .nums div span{display:block;margin-top:6px;color:#EAF3FC;font-size:15.5px}
+.case .nums p{grid-column:1/-1;font-size:14px;color:#EAF3FC;border-top:1px solid rgba(255,255,255,.3);padding-top:14px}
+.case .story{padding:36px}.case .story h3{font-size:24px;margin-bottom:6px}
+@media(max-width:900px){.case{grid-template-columns:1fr}}
+.fin{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:56px}
+.fin .calc{box-shadow:none;border:1px solid var(--line)}
+@media(max-width:900px){.fin{grid-template-columns:1fr}}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.ba>div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px}
+.ba .now{border-color:var(--green);background:linear-gradient(180deg,var(--surface),var(--soft))}
+.ba small{display:block;font-weight:600;color:var(--muted);margin-bottom:6px}.ba h3{font-size:24px}
+.ba .old li::before{content:"–";color:var(--muted)}
+@media(max-width:800px){.ba{grid-template-columns:1fr}}
+.testi{margin:28px 0 0;border:2px dashed var(--line);border-radius:16px;padding:22px 26px;color:var(--muted);font-size:15.5px}
+.testi b{display:block;color:var(--ink);margin-bottom:4px}
+.big .btn.ghost{margin-top:28px}
+</style></head><body>
+<header><div class="wrap nav">
+<a class="brand" href="#top" aria-label="Human Technologies, inicio"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="19" cy="6" r="3.6" fill="#fff"/><path d="M5 5l9 9m-2 14l3-12 8-8" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 27c1-4 2-8 3-12" stroke="#6AC14C" stroke-width="3.2" stroke-linecap="round"/></svg>Human Technologies</a>
+<ul><li><a href="#planta">Su planta</a></li><li><a href="#equipos">Su gente</a></li><li><a href="#resultados">Finanzas</a></li><li><a href="#humantechnologies">Human Technologies</a></li></ul><a class="btn" href="#contacto">Solicitar diagnóstico</a></div></header><main id="top"><section class="hero a"><div class="wrap">
+<h1>Sepa qué pasa en su línea de producción, mientras ocurre</h1>
+<p class="sub">Captura automática de producción, paros y calidad en cada máquina de su planta de manufactura. Su equipo deja de anotar y empieza a analizar.</p>
+<div class="cta-row"><a class="btn" href="#contacto">Solicite un diagnóstico de madurez industrial</a><a class="btn ghost" href="#planta">Vea qué mide en su línea</a></div>
+<div class="cmp" id="cmp" role="slider" tabindex="0" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+<div class="layer after" id="la"></div><div class="layer before" id="lb"></div>
+<div class="bar"><div class="knob">⇄</div></div><span class="tag l">Anotando y consolidando a mano</span><span class="tag r">Datos automáticos, equipo enfocado</span></div>
+<div class="cap">Mismo equipo, mismo turno. Arrastre para ver la diferencia. <em>Escena ilustrativa, se reemplaza por fotografías reales.</em></div>
+</div></section>
+<section id="planta" class="dark-sec"><div class="wrap"><h2>Su línea de manufactura, medida en tiempo real</h2>
+<p class="lead">Los datos de la máquina no son fáciles de obtener. Los capturamos directamente de ella, sin depender del papel ni de Excel.</p>
+<div class="audi"><span>Alimentos y bebidas</span><span>Plásticos</span><span>Farmacéutico</span><span>Papel, cartón y empaques</span><span>Textil y vestuario</span><span>Químicos y productos de consumo</span></div>
+<div class="cards"><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Producción por máquina</h3><p>Conteo automático por máquina, turno y producto.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Paros y microparos con causa</h3><p>Cada detención medida y clasificada, para atacar lo que más tiempo le cuesta.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>OEE en pantalla</h3><p>Disponibilidad, rendimiento y calidad de cada línea, al momento.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Alertas a quien debe actuar</h3><p>El aviso llega al supervisor o ingeniero correspondiente, en el turno.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 6a4 4 0 005 5l-9 9a2.5 2.5 0 01-4-4l9-9a4 4 0 00-1-1z"/></svg></div><h3>Mantenimiento preventivo</h3><p>Intervenir antes de la falla y prevenir riesgos operativos.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h4v4H4zM16 14h4v4h-4zM8 8h4a4 4 0 014 4v2"/></svg></div><h3>Calidad y trazabilidad</h3><p>Registros confiables para responder rápido ante clientes y auditorías.</p></div></div></div></section>
+<section class="big"><div class="wrap"><h2>Cuando la planta trabaja bien, la gente trabaja bien. Y al revés.</h2>
+<p>La tecnología hace el trabajo repetitivo. La gente, lo importante.</p></div></section>
+<section id="equipos"><div class="wrap"><h2>Tecnología que amplía las capacidades de su gente</h2>
+<p class="lead">No sustituye a nadie. Quita lo repetitivo para que el equipo se dedique a las tareas que dan valor: analizar, mejorar y decidir.</p>
+<div class="ba"><div><small>Antes · el analista de planta</small><h3>Contar, anotar, consolidar</h3>
+<ul class="checks old"><li>Anotar producción y paros en papel</li><li>Pasar los datos a Excel y juntar varios archivos</li><li>Armar reportes cuando el turno ya terminó</li></ul></div>
+<div class="now"><small>Ahora · el mismo analista</small><h3>Analizar, proponer, decidir</h3>
+<ul class="checks"><li>Revisar las causas reales de cada paro</li><li>Proponer mejoras con datos confiables</li><li>Apoyar a producción y finanzas con información al instante</li></ul></div></div>
+<figure class="testi"><b>Testimonio del analista de planta</b>Espacio reservado para la cita real del caso de éxito. Se completa con el material del proveedor.</figure>
+<p class="lead" style="margin-top:34px">El resultado: equipos más alineados, porque todos miran la misma información, y equipos más eficaces, porque dedican su tiempo a lo que mejor saben hacer.</p></div></section>
+<section class="alt" id="resultados"><div class="wrap"><h2>Cuando el dato llega a tiempo, finanzas decide a tiempo</h2>
+<p class="lead">Reportes instantáneos y dashboards para tomar decisiones en el momento en que son útiles, no cuando el cierre ya pasó.</p>
+<div class="case"><div class="nums"><div><b>+20%</b><span>producción</span></div><div><b>−25%</b><span>tiempo de parada</span></div><p>Caso de éxito en una planta de empaques, presentado por el proveedor de la solución.</p></div>
+<div class="story"><h3>Antes y después</h3><ul class="checks"><li>Antes: reportes manuales, datos poco precisos y sin visibilidad en tiempo real</li><li>Después: reportes más ágiles y decisiones con información al instante</li><li>Resultado: más producción con los mismos recursos</li></ul></div></div>
+<div class="fin"><div><h2 style="font-size:clamp(26px,3.4vw,38px)">De la mejora operativa al impacto económico</h2>
+<ul class="checks"><li>Reportes consolidados sin trabajo manual</li><li>Indicadores de planta traducidos a impacto financiero</li><li>Integración con el ERP de la empresa</li><li>Una sola versión de la información para ingeniería y finanzas</li><li>Opciones para operaciones de distinta escala, desde pocas máquinas hasta plantas completas</li></ul></div>
+<div class="calc"><h3>¿Cuánto le cuestan sus paros?</h3><p>Haga un cálculo rápido con sus propios números.</p>
+<label>Horas de línea detenida por semana<input id="h" type="number" min="0" value="10"></label>
+<label>Costo de cada hora detenida (en su moneda)<input id="c" type="number" min="0" value="500"></label>
+<label>Supuesto de mejora: <span id="pv">10</span>%<input id="p" type="range" min="1" max="40" value="10"></label>
+<div class="out"><small>Costo anual de paros</small><b id="t">0</b><small style="margin-top:10px">Recuperable con el supuesto elegido</small><b class="g" id="r">0</b></div>
+<p class="fine">Cálculo orientativo con los datos que usted ingresa. No es una promesa de resultado.</p></div></div></div></section>
+<section id="piloto"><div class="wrap"><h2>Empiece pequeño. Mida resultados. Escale con evidencia.</h2>
+<div class="steps3"><div><span class="k">1</span><h3>Diagnóstico</h3><p>Entendemos su negocio, su planta y la madurez de personas, procesos, datos y tecnología.</p></div>
+<div><span class="k">2</span><h3>Piloto</h3><p>Una línea o una máquina crítica, con indicadores acordados y línea base comparable.</p></div>
+<div><span class="k">3</span><h3>Escala</h3><p>Con resultados a la vista, se extiende a más líneas y se integra con su ERP.</p></div></div></div></section>
+<section class="big" id="humantechnologies"><div class="wrap"><h2>La transformación primero es humana, después digital.</h2>
+<p>Human Technologies es la firma de transformación digital para la manufactura guatemalteca: tecnología, gestión del cambio y liderazgo para que la mejora se sostenga, porque las personas la usan.</p>
+<a class="btn ghost" href="https://www.thehumantechnologies.com">Conozca Human Technologies</a></div></section>
+<section class="contact" id="contacto"><div class="wrap grid"><div><h2>Conversemos sobre los retos de su planta</h2><p class="lead">Cuéntenos qué produce y qué le gustaría mejorar. Le responderemos para coordinar un diagnóstico de madurez industrial.</p></div><div>
+<form id="f"><div class="row"><label>Nombre<input required name="nombre" autocomplete="name"></label><label>Empresa<input required name="empresa" autocomplete="organization"></label></div>
+<div class="row"><label>Sector industrial<select name="sector"><option>Alimentos y bebidas</option><option>Plásticos</option><option>Farmacéutico</option><option>Papel, cartón y empaques</option><option>Textil y vestuario</option><option>Químicos y productos de consumo</option><option>Otro</option></select></label><label>Cargo<input name="cargo" autocomplete="organization-title"></label></div>
+<label>Principal reto<textarea name="reto"></textarea></label><label>Teléfono o correo<input required name="contacto" autocomplete="email"></label>
+<button class="btn" type="submit">Solicitar diagnóstico</button></form>
+<div class="ok" id="ok"><h3>Solicitud recibida</h3><p>Prototipo: el formulario aún no está conectado.</p></div></div></div></section><script>
+function scene(m){var h=m==='happy';
+var c={bg:h?'#EAF3FC':'#C5CDD6',fl:h?'#CFE0F2':'#98A3AF',belt:h?'#1E73BE':'#69747F',mach:h?'#1E73BE':'#78848F',lamp:h?'#6AC14C':'#D0584A',skin:'#F1C9A5'};
+var ws=[{x:250,v:h?'#6AC14C':'#5A6571'},{x:420,v:h?'#FFFFFF':'#505B66'},{x:590,v:h?'#6AC14C':'#5A6571'}];
+var s='<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="'+(h?'Equipo contento trabajando con datos al instante':'Equipo cansado trabajando con papeles y retrasos')+'">';
+s+='<rect width="800" height="450" fill="'+c.bg+'"/><rect y="330" width="800" height="120" fill="'+c.fl+'"/>';
+s+='<rect x="520" y="120" width="240" height="180" rx="14" fill="'+c.mach+'"/><circle cx="548" cy="148" r="11" fill="'+c.lamp+'"/><rect x="580" y="140" width="150" height="16" rx="8" fill="#fff" opacity=".35"/>';
+s+='<rect x="30" y="296" width="740" height="26" rx="8" fill="'+c.belt+'"/>';
+var nb=h?5:2;for(var i=0;i<nb;i++){var bx=h?60+i*130:140+i*330;s+='<rect x="'+bx+'" y="262" width="62" height="36" rx="5" fill="'+(h?'#fff':'#B9C2CC')+'"/>';}
+if(h){s+='<rect x="60" y="70" width="220" height="130" rx="12" fill="#fff"/><rect x="80" y="150" width="26" height="36" rx="4" fill="#6AC14C"/><rect x="118" y="130" width="26" height="56" rx="4" fill="#6AC14C"/><rect x="156" y="108" width="26" height="78" rx="4" fill="#6AC14C"/><rect x="194" y="92" width="26" height="94" rx="4" fill="#1E73BE"/><path d="M80 120l40-22 40 10 60-26" stroke="#1E73BE" stroke-width="4" fill="none" stroke-linecap="round"/>';}
+else{s+='<g fill="#fff" opacity=".92"><rect x="70" y="90" width="90" height="116" rx="4" transform="rotate(-8 115 148)"/><rect x="130" y="78" width="90" height="116" rx="4" transform="rotate(6 175 136)"/><rect x="100" y="110" width="90" height="116" rx="4" transform="rotate(-2 145 168)"/></g><g stroke="#98A3AF" stroke-width="3"><path d="M110 140h60M110 156h50M150 130h50M150 148h44M120 170h60"/></g><rect x="210" y="360" width="60" height="40" rx="4" fill="#fff" opacity=".8" transform="rotate(14 240 380)"/><rect x="520" y="372" width="70" height="44" rx="4" fill="#fff" opacity=".8" transform="rotate(-10 555 394)"/>';}
+ws.forEach(function(w,i){var x=w.x,tilt=h?0:(i%2?-7:7);
+s+='<g transform="rotate('+tilt+' '+x+' 330)"><rect x="'+(x-34)+'" y="214" width="68" height="120" rx="26" fill="'+w.v+'"/>';
+s+='<circle cx="'+x+'" cy="186" r="27" fill="'+c.skin+'"/><path d="M'+(x-27)+' 182a27 27 0 0154 0z" fill="'+(h?'#1E73BE':'#3C4650')+'"/>';
+if(h){s+='<circle cx="'+(x-9)+'" cy="188" r="3" fill="#1F2933"/><circle cx="'+(x+9)+'" cy="188" r="3" fill="#1F2933"/><path d="M'+(x-11)+' 198q11 12 22 0" stroke="#1F2933" stroke-width="3" fill="none" stroke-linecap="round"/>';}
+else{s+='<path d="M'+(x-14)+' 189h10M'+(x+4)+' 189h10" stroke="#1F2933" stroke-width="3" stroke-linecap="round"/><path d="M'+(x-10)+' 205q10-9 20 0" stroke="#1F2933" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M'+(x-16)+' 177l11 4M'+(x+16)+' 177l-11 4" stroke="#1F2933" stroke-width="2.5" stroke-linecap="round"/>';}
+s+='</g>';});
+if(h){s+='<rect x="446" y="248" width="40" height="28" rx="4" fill="#fff" stroke="#1E73BE" stroke-width="3"/><path d="M452 266l8-8 6 5 12-10" stroke="#6AC14C" stroke-width="3" fill="none" stroke-linecap="round"/>';}
+return s+'</svg>';}
+(function(){var b=document.getElementById('lb'),a=document.getElementById('la');
+/* PARA PRODUCCIÓN: reemplace estas dos escenas por <img src="equipo-cansado.jpg"> y <img src="equipo-contento.jpg"> */
+b.innerHTML=scene('tired');a.innerHTML=scene('happy');
+var box=document.getElementById('cmp');function set(p){p=Math.max(4,Math.min(96,p));box.style.setProperty('--pos',p+'%');box.setAttribute('aria-valuenow',Math.round(p));}
+function mv(e){var r=box.getBoundingClientRect();set((e.clientX-r.left)/r.width*100)}
+var down=false;box.addEventListener('pointerdown',function(e){down=true;box.setPointerCapture(e.pointerId);mv(e)});
+box.addEventListener('pointermove',function(e){if(down)mv(e)});box.addEventListener('pointerup',function(){down=false});
+box.addEventListener('keydown',function(e){var v=+box.getAttribute('aria-valuenow');if(e.key==='ArrowLeft')set(v-5);if(e.key==='ArrowRight')set(v+5)});
+var t=0,anim=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(anim){var s=performance.now();(function f(n){if(down||t){return}var k=(n-s)/1000;if(k<2.4){set(50+Math.sin(k*2.6)*22*(1-k/2.4));requestAnimationFrame(f)}})(s);}
+box.addEventListener('pointerdown',function(){t=1});set(50);})();
+(function(){var h=document.getElementById('h'),c=document.getElementById('c'),p=document.getElementById('p');
+function f(n){return Math.round(n).toLocaleString('es-GT')}
+function u(){var t=(+h.value||0)*52*(+c.value||0);document.getElementById('pv').textContent=p.value;document.getElementById('t').textContent=f(t);document.getElementById('r').textContent=f(t*p.value/100)}
+[h,c,p].forEach(function(e){e.addEventListener('input',u)});u()})();</script></main><footer><div class="wrap"><span>© Human Technologies · Guatemala. Todos los derechos reservados.</span><a href="https://www.thehumantechnologies.com">thehumantechnologies.com</a></div></footer>
+<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'});</script></body></html>

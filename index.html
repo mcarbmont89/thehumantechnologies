@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Human Technologies — Sepa qué pasa en su línea de producción, mientras ocurre</title><meta name="description" content="Captura automática de producción, paros y calidad para manufactura. Su equipo deja de anotar y empieza a analizar; finanzas decide con reportes al instante. Guatemala.">
+<title>Human Technologies | Sepa qué pasa en su línea de producción, mientras ocurre</title><meta name="description" content="Captura automática de producción, paros y calidad para manufactura. Su equipo deja de anotar y empieza a analizar; finanzas decide con reportes al instante. Guatemala.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -60,14 +60,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 .hero.a{text-align:center;padding-bottom:0}
 .hero.a h1{max-width:18ch;margin:0 auto}.hero.a .sub{margin-left:auto;margin-right:auto}.hero.a .cta-row{justify-content:center}
-.cmp{position:relative;margin:48px auto 0;max-width:980px;aspect-ratio:16/9;border-radius:22px 22px 0 0;overflow:hidden;touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none;box-shadow:0 -10px 50px rgba(0,0,0,.18)}
+.cmp{position:relative;margin:48px auto 0;max-width:720px;aspect-ratio:4/3;border-radius:22px 22px 0 0;overflow:hidden;touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none;box-shadow:0 -10px 50px rgba(0,0,0,.18)}
 .cmp .layer{position:absolute;inset:0}.cmp .layer svg,.cmp .layer img{width:100%;height:100%;object-fit:cover;display:block}
 .cmp .before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
 .cmp .bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.35)}
 .cmp .knob{position:absolute;top:50%;left:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 4px 16px rgba(0,0,0,.3);color:var(--brand);font-weight:700}
 .cmp .tag{position:absolute;bottom:16px;padding:8px 14px;border-radius:99px;font-weight:600;font-size:14px;background:rgba(15,30,50,.72);color:#fff}
+.cmp .tag{transition:opacity .2s;max-width:calc(100% - 32px)}.cmp[data-side=l] .tag.r,.cmp[data-side=r] .tag.l{opacity:0}
 .cmp .tag.l{left:16px}.cmp .tag.r{right:16px;background:var(--green);color:#0B2410}
-.cap{background:var(--surface);border:1px solid var(--line);border-top:0;max-width:980px;margin:0 auto;padding:16px 24px;text-align:center;color:var(--muted);font-size:15px;border-radius:0 0 22px 22px}
+.cap{background:var(--surface);border:1px solid var(--line);border-top:0;max-width:720px;margin:0 auto;padding:16px 24px;text-align:center;color:var(--muted);font-size:15px;border-radius:0 0 22px 22px}
 .dark-sec{padding-top:56px}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
 .who{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px}
@@ -121,39 +122,92 @@ details[open] summary::after{transform:rotate(45deg)}details p{margin-top:12px;c
 .ba>div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px}
 .ba .now{border-color:var(--green);background:linear-gradient(180deg,var(--surface),var(--soft))}
 .ba small{display:block;font-weight:600;color:var(--muted);margin-bottom:6px}.ba h3{font-size:24px}
-.ba .old li::before{content:"–";color:var(--muted)}
 @media(max-width:800px){.ba{grid-template-columns:1fr}}
 .testi{margin:28px 0 0;border:2px dashed var(--line);border-radius:16px;padding:22px 26px;color:var(--muted);font-size:15.5px}
 .testi b{display:block;color:var(--ink);margin-bottom:4px}
+.secs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}.sec{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}.sec img{display:block;width:100%;height:auto}.sec.more{background:var(--brand);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:center;gap:12px;align-items:flex-start}.sec.more b{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(24px,3vw,34px);line-height:1.1}.sec.more span{color:#EAF3FC}@media(max-width:800px){.secs{grid-template-columns:1fr}}
+.ba2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}.ba2 figure{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line)}.ba2 img{display:block;width:100%;height:auto}@media(max-width:800px){.ba2{grid-template-columns:1fr}}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}.feat figure{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}.feat img{display:block;width:100%;height:auto}@media(max-width:800px){.feat{grid-template-columns:1fr}.feat img{aspect-ratio:1/1;object-fit:cover;object-position:left center}}.arts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.art{background:var(--surface);border:2px dashed var(--line);border-radius:18px;padding:28px}.art small{display:block;font-weight:600;color:var(--brand);margin-bottom:10px}.art h3{font-size:22px;margin-bottom:8px}.art p{color:var(--muted);font-size:15.5px}@media(max-width:900px){.arts{grid-template-columns:1fr}}
+.car{margin-top:36px}.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}.track::-webkit-scrollbar{display:none}.slide{flex:0 0 78%;margin:0;scroll-snap-align:start;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:16/9}.slide img{display:block;width:100%;height:100%;object-fit:cover}.slide.more{background:var(--brand);color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:center;gap:14px;align-items:flex-start}.slide.more b{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3.4vw,42px);line-height:1.1}.slide.more span{color:#EAF3FC;font-size:18px;max-width:34ch}.ctl{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:20px}.ctl button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--brand);background:var(--surface);color:var(--brand);font-size:26px;line-height:1;cursor:pointer}.ctl button:hover{background:var(--brand);color:#fff}.ctl span{font-weight:600;color:var(--muted);min-width:56px;text-align:center}@media(max-width:800px){.slide{flex-basis:92%;aspect-ratio:4/5}.slide img{object-position:right center}.slide.more{padding:28px}}
 .big .btn.ghost{margin-top:28px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.tab{text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;font:inherit;color:var(--ink);cursor:pointer;display:flex;gap:12px;align-items:flex-start}
+.tab .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--brand);font-weight:700;display:grid;place-items:center}
+.tab b{font-family:"Bricolage Grotesque";font-size:18px;line-height:1.2;display:block}
+.tab small{display:block;color:var(--muted);font-size:13.5px;margin-top:3px;line-height:1.35}
+.tab[aria-selected=true]{border-color:var(--brand);box-shadow:0 0 0 3px rgba(30,115,190,.16)}
+.tab[aria-selected=true] .n{background:var(--brand);color:#fff}
+@media(max-width:900px){.tabs{grid-template-columns:1fr}}
+.dpanel{display:none;margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.dpanel.on{display:block}
+.dtag{display:inline-block;font-size:12.5px;font-weight:600;color:var(--muted);background:var(--soft);border-radius:99px;padding:4px 12px;margin-bottom:16px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.kpi small{display:block;color:var(--muted);font-size:13px;line-height:1.3}
+.kpi b{display:block;font-family:"Bricolage Grotesque";font-size:27px;line-height:1.15;margin-top:2px}
+.kpi.warn b{color:#B4432F}.kpi.good b{color:var(--green-ink)}
+@media(max-width:700px){.kpis{grid-template-columns:1fr 1fr}.kpi b{font-size:22px}}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.dg .full{grid-column:1/-1}
+@media(max-width:800px){.dg{grid-template-columns:1fr}}
+.box{border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.box h4{margin:0 0 12px;font-family:"Bricolage Grotesque";font-size:18px;letter-spacing:-.01em}
+.box p.n{font-size:13.5px;color:var(--muted);margin-top:10px}
+.hb{display:grid;grid-template-columns:128px 1fr 78px;gap:10px;align-items:center;font-size:14px;margin:9px 0}
+.hb i{display:block;height:14px;border-radius:99px}
+.hb em{font-style:normal;font-weight:600;text-align:right}
+@media(max-width:520px){.hb{grid-template-columns:96px 1fr 62px;font-size:13px}}
+.stack{display:flex;height:36px;border-radius:10px;overflow:hidden;font-size:12px;color:#fff;font-weight:600}
+.stack span{display:grid;place-items:center;overflow:hidden;white-space:nowrap}
+.lg{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:13px;color:var(--muted)}
+.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.tbw{overflow-x:auto}
+.tb{width:100%;border-collapse:collapse;font-size:14.5px;min-width:420px}
+.tb th{text-align:left;background:var(--soft);padding:9px 10px;font-size:13px;white-space:nowrap}
+.tb td{padding:9px 10px;border-top:1px solid var(--line)}
+.tb .r{text-align:right}.tb tr.t td{font-weight:700;background:var(--bg)}
+.tb td i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+.fr{margin:10px 0}.fr span{display:block;font-size:14px;margin-bottom:4px}.fr i{display:block;height:20px;border-radius:8px}
+.tot{background:var(--soft);border-radius:12px;padding:14px 16px;margin-top:12px;text-align:center}
+.tot small{display:block;color:var(--muted);font-size:13px}.tot b{font-family:"Bricolage Grotesque";font-size:28px}
+.tot.bad{background:#FBECEA;border:1px solid #E8B4AC}.tot.bad b{color:#B4432F}
+.dec{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:800px){.dec{grid-template-columns:1fr}}
+.dec>div{background:var(--soft);border-radius:14px;padding:18px}
+.dec h5{margin:0 0 6px;font-family:"Bricolage Grotesque";font-size:18px}
+.dec p{font-size:14.5px;color:var(--muted);margin-bottom:10px}
+.dec ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px}
+.dec li::before{content:"✓";color:var(--green-ink);font-weight:700;margin-right:8px}
+.src{font-size:12.5px;color:var(--muted);margin-top:14px}
+
 </style></head><body>
 <header><div class="wrap nav">
 <a class="brand" href="#top" aria-label="Human Technologies, inicio"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="19" cy="6" r="3.6" fill="#fff"/><path d="M5 5l9 9m-2 14l3-12 8-8" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 27c1-4 2-8 3-12" stroke="#6AC14C" stroke-width="3.2" stroke-linecap="round"/></svg>Human Technologies</a>
-<ul><li><a href="#planta">Su planta</a></li><li><a href="#equipos">Su gente</a></li><li><a href="#resultados">Finanzas</a></li><li><a href="#humantechnologies">Human Technologies</a></li></ul><a class="btn" href="#contacto">Solicitar diagnóstico</a></div></header><main id="top"><section class="hero a"><div class="wrap">
+<ul><li><a href="#planta">Su planta</a></li><li><a href="#equipos">Su gente</a></li><li><a href="#resultados">Finanzas</a></li><li><a href="#articulos">Artículos</a></li><li><a href="#humantechnologies">Human Technologies</a></li></ul><a class="btn" href="#contacto">Contáctenos</a></div></header><main id="top"><section class="hero a"><div class="wrap">
 <h1>Sepa qué pasa en su línea de producción, mientras ocurre</h1>
 <p class="sub">Captura automática de producción, paros y calidad en cada máquina de su planta de manufactura. Su equipo deja de anotar y empieza a analizar.</p>
 <div class="cta-row"><a class="btn" href="#contacto">Solicite un diagnóstico de madurez industrial</a><a class="btn ghost" href="#planta">Vea qué mide en su línea</a></div>
 <div class="cmp" id="cmp" role="slider" tabindex="0" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
 <div class="layer after" id="la"></div><div class="layer before" id="lb"></div>
 <div class="bar"><div class="knob">⇄</div></div><span class="tag l">Anotando y consolidando a mano</span><span class="tag r">Datos automáticos, equipo enfocado</span></div>
-<div class="cap">Mismo equipo, mismo turno. Arrastre para ver la diferencia. <em>Escena ilustrativa, se reemplaza por fotografías reales.</em></div>
+<div class="cap">Mismo equipo, mismo turno. Arrastre para ver la diferencia. <em>Imagen ilustrativa.</em></div>
 </div></section>
 <section id="planta" class="dark-sec"><div class="wrap"><h2>Su línea de manufactura, medida en tiempo real</h2>
 <p class="lead">Los datos de la máquina no son fáciles de obtener. Los capturamos directamente de ella, sin depender del papel ni de Excel.</p>
-<div class="audi"><span>Alimentos y bebidas</span><span>Plásticos</span><span>Farmacéutico</span><span>Papel, cartón y empaques</span><span>Textil y vestuario</span><span>Químicos y productos de consumo</span></div>
-<div class="cards"><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Producción por máquina</h3><p>Conteo automático por máquina, turno y producto.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Paros y microparos con causa</h3><p>Cada detención medida y clasificada, para atacar lo que más tiempo le cuesta.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>OEE en pantalla</h3><p>Disponibilidad, rendimiento y calidad de cada línea, al momento.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Alertas a quien debe actuar</h3><p>El aviso llega al supervisor o ingeniero correspondiente, en el turno.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 6a4 4 0 005 5l-9 9a2.5 2.5 0 01-4-4l9-9a4 4 0 00-1-1z"/></svg></div><h3>Mantenimiento preventivo</h3><p>Intervenir antes de la falla y prevenir riesgos operativos.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h4v4H4zM16 14h4v4h-4zM8 8h4a4 4 0 014 4v2"/></svg></div><h3>Calidad y trazabilidad</h3><p>Registros confiables para responder rápido ante clientes y auditorías.</p></div></div></div></section>
+<div class="feat"><figure><img src="img/produccion.jpg" alt="Producción por máquina: conteo automático por máquina, turno y producto" loading="lazy"></figure><figure><img src="img/paros.jpg" alt="Paros y microparos con causa: cada detención medida y clasificada, para atacar lo que más tiempo le cuesta" loading="lazy"></figure><figure><img src="img/oee.jpg" alt="OEE en pantalla: disponibilidad, rendimiento y calidad de cada línea, al momento" loading="lazy"></figure><figure><img src="img/alertas.jpg" alt="Alertas a quien debe actuar: el aviso llega al supervisor o ingeniero correspondiente, en el turno" loading="lazy"></figure><figure><img src="img/mantenimiento.jpg" alt="Mantenimiento preventivo: intervenir antes de la falla y prevenir riesgos operativos" loading="lazy"></figure><figure><img src="img/calidad.jpg" alt="Calidad y trazabilidad: registros confiables para responder rápido ante clientes y auditorías" loading="lazy"></figure></div></div></section>
+<section class="alt" id="industrias"><div class="wrap"><h2>Hecho para la industria guatemalteca</h2>
+<p class="lead">Cada sector tiene sus propios retos en la línea. Estos son algunos en los que trabajamos.</p>
+<div class="car" role="region" aria-roledescription="carrusel" aria-label="Industrias"><div class="track" id="trk" tabindex="0"><figure class="slide"><img src="img/alimentos.jpg" alt="Alimentos y bebidas: operarios en una línea de embotellado" loading="lazy" width="1200" height="675"></figure><figure class="slide"><img src="img/plasticos.jpg" alt="Plásticos: cambio de moldes y monitoreo de ciclos" loading="lazy" width="1200" height="675"></figure><figure class="slide"><img src="img/farmaceutica.jpg" alt="Farmacéutica: línea de viales con control de lotes" loading="lazy" width="1200" height="675"></figure><figure class="slide"><img src="img/empaques.jpg" alt="Empaques: impresión y control de calidad de bolsas" loading="lazy" width="1200" height="675"></figure><figure class="slide"><img src="img/papel.jpg" alt="Papel y cartón: línea de corrugado y control de merma" loading="lazy" width="1200" height="675"></figure><div class="slide more"><b>Textil, químicos y productos de consumo</b><span>¿Su industria no aparece aquí? Cuéntenos de su línea y la medimos igual.</span><a class="btn" href="#contacto">Contáctenos</a></div></div>
+<div class="ctl"><button type="button" id="pv2" aria-label="Industria anterior">‹</button><span id="cnt" aria-live="polite">1 / 6</span><button type="button" id="nx2" aria-label="Industria siguiente">›</button></div></div></div></section>
 <section class="big"><div class="wrap"><h2>Cuando la planta trabaja bien, la gente trabaja bien. Y al revés.</h2>
 <p>La tecnología hace el trabajo repetitivo. La gente, lo importante.</p></div></section>
 <section id="equipos"><div class="wrap"><h2>Tecnología que amplía las capacidades de su gente</h2>
 <p class="lead">No sustituye a nadie. Quita lo repetitivo para que el equipo se dedique a las tareas que dan valor: analizar, mejorar y decidir.</p>
-<div class="ba"><div><small>Antes · el analista de planta</small><h3>Contar, anotar, consolidar</h3>
-<ul class="checks old"><li>Anotar producción y paros en papel</li><li>Pasar los datos a Excel y juntar varios archivos</li><li>Armar reportes cuando el turno ya terminó</li></ul></div>
-<div class="now"><small>Ahora · el mismo analista</small><h3>Analizar, proponer, decidir</h3>
-<ul class="checks"><li>Revisar las causas reales de cada paro</li><li>Proponer mejoras con datos confiables</li><li>Apoyar a producción y finanzas con información al instante</li></ul></div></div>
-<figure class="testi"><b>Testimonio del analista de planta</b>Espacio reservado para la cita real del caso de éxito. Se completa con el material del proveedor.</figure>
+<div class="ba2"><figure><img src="img/antes.jpg" alt="Antes, el analista de planta: contar, anotar, consolidar. Anota producción y paros en papel, pasa datos a Excel y arma reportes cuando el turno ya terminó." loading="lazy"></figure><figure><img src="img/ahora.jpg" alt="Ahora, el mismo analista: analizar, proponer, decidir. Revisa las causas reales de cada paro, propone mejoras con datos confiables y apoya a producción y finanzas con información al instante." loading="lazy"></figure></div>
 <p class="lead" style="margin-top:34px">El resultado: equipos más alineados, porque todos miran la misma información, y equipos más eficaces, porque dedican su tiempo a lo que mejor saben hacer.</p></div></section>
 <section class="alt" id="resultados"><div class="wrap"><h2>Cuando el dato llega a tiempo, finanzas decide a tiempo</h2>
 <p class="lead">Reportes instantáneos y dashboards para tomar decisiones en el momento en que son útiles, no cuando el cierre ya pasó.</p>
+<div class="tabs" role="tablist" aria-label="Preguntas que responde el análisis financiero"><button class="tab" role="tab" aria-selected="true" aria-controls="d1" data-d="d1"><span class="n">1</span><span><b>¿Cuánto cuesta cada equipo?</b><small>Y en qué estados se consumen sus recursos</small></span></button><button class="tab" role="tab" aria-selected="false" aria-controls="d2" data-d="d2"><span class="n">2</span><span><b>¿Qué causas concentran tiempo y costo?</b><small>Para priorizar intervenciones</small></span></button><button class="tab" role="tab" aria-selected="false" aria-controls="d3" data-d="d3"><span class="n">3</span><span><b>¿Qué parte de la mejora se vuelve beneficio?</b><small>De capacidad liberada a margen económico</small></span></button></div><div class="dpanel on" id="d1" role="tabpanel"><span class="dtag">Ejemplo ilustrativo con datos simulados</span><div class="kpis"><div class="kpi "><small>TCO del período</small><b>Q240,000</b></div><div class="kpi "><small>Horas clasificadas</small><b>1,000 h</b></div><div class="kpi warn"><small>Costo en paradas no programadas</small><b>Q30,000</b></div><div class="kpi "><small>Participación en TCO</small><b>12.5%</b></div></div><div class="dg"><div class="box"><h4>TCO por equipo</h4><div class="hb"><span>Máquina 1 · Frascos</span><i style="width:100%;background:#2F80D9"></i><em>Q140,000</em></div><div class="hb"><span>Máquina 2 · Tapas</span><i style="width:71.4%;background:#2F80D9"></i><em>Q100,000</em></div><p class="n">Costo total de propiedad y operación por equipo.</p></div><div class="box"><h4>Distribución de horas por estado</h4><div class="stack"><span style="width:70%;background:#2AA7A3" title="Operación 700 h">700 h</span><span style="width:10%;background:#2F80D9" title="Setup 100 h">100</span><span style="width:8%;background:#E9B44C" title="Parada programada 80 h">80</span><span style="width:12%;background:#D9606A" title="Parada no programada 120 h">120</span></div><div class="lg"><span><i style="background:#2AA7A3"></i>Operación</span><span><i style="background:#2F80D9"></i>Setup</span><span><i style="background:#E9B44C"></i>Parada programada</span><span><i style="background:#D9606A"></i>Parada no programada</span></div></div><div class="box full"><h4>Valor económico por estado</h4><div class="tbw"><table class="tb"><tr><th>Estado</th><th class="r">Horas</th><th class="r">Costo asignado</th><th class="r">% del TCO</th></tr><tr><td><i style="background:#2AA7A3"></i>Operación</td><td class="r">700</td><td class="r">Q168,000</td><td class="r">70.0%</td></tr><tr><td><i style="background:#2F80D9"></i>Setup</td><td class="r">100</td><td class="r">Q24,000</td><td class="r">10.0%</td></tr><tr><td><i style="background:#E9B44C"></i>Parada programada</td><td class="r">80</td><td class="r">Q18,000</td><td class="r">7.5%</td></tr><tr><td><i style="background:#D9606A"></i>Parada no programada</td><td class="r">120</td><td class="r">Q30,000</td><td class="r">12.5%</td></tr><tr class="t"><td>Total</td><td class="r">1,000</td><td class="r">Q240,000</td><td class="r">100.0%</td></tr></table></div><p class="n">Criterio de costeo: recursos por equipo y consumo por estado. Las tarifas pueden variar según el estado.</p></div></div></div><div class="dpanel" id="d2" role="tabpanel"><span class="dtag">Ejemplo ilustrativo con datos simulados</span><div class="kpis"><div class="kpi warn"><small>Tiempo detenido</small><b>120 h</b></div><div class="kpi "><small>Costo asignado</small><b>Q30,000</b></div><div class="kpi "><small>Mecánica + eléctrica</small><b>66.7% del costo</b></div><div class="kpi "><small>Causas clasificadas</small><b>4</b></div></div><div class="dg"><div class="box"><h4>Costo por causa</h4><div class="hb"><span>Mecánica</span><i style="width:100%;background:#2AA7A3"></i><em>Q12,500</em></div><div class="hb"><span>Eléctrica</span><i style="width:60%;background:#2F80D9"></i><em>Q7,500</em></div><div class="hb"><span>Falta de material</span><i style="width:50%;background:#E9B44C"></i><em>Q6,250</em></div><div class="hb"><span>Ajuste de calidad</span><i style="width:30%;background:#D9606A"></i><em>Q3,750</em></div></div><div class="box"><h4>Horas por causa</h4><div class="hb"><span>Mecánica</span><i style="width:100%;background:#2AA7A3"></i><em>50 h</em></div><div class="hb"><span>Eléctrica</span><i style="width:60%;background:#2F80D9"></i><em>30 h</em></div><div class="hb"><span>Falta de material</span><i style="width:50%;background:#E9B44C"></i><em>25 h</em></div><div class="hb"><span>Ajuste de calidad</span><i style="width:30%;background:#D9606A"></i><em>15 h</em></div></div><div class="box full"><h4>Detalle para priorizar intervenciones</h4><div class="tbw"><table class="tb"><tr><th>Causa</th><th class="r">Horas</th><th class="r">Costo asignado</th><th class="r">% acumulado</th><th>Acción a evaluar</th></tr><tr><td><i style="background:#2AA7A3"></i>Mecánica</td><td class="r">50</td><td class="r">Q12,500</td><td class="r">41.7%</td><td>Inspección de componentes</td></tr><tr><td><i style="background:#2F80D9"></i>Eléctrica</td><td class="r">30</td><td class="r">Q7,500</td><td class="r">66.7%</td><td>Revisar alimentación</td></tr><tr><td><i style="background:#E9B44C"></i>Falta de material</td><td class="r">25</td><td class="r">Q6,250</td><td class="r">87.5%</td><td>Ajustar abastecimiento</td></tr><tr><td><i style="background:#D9606A"></i>Ajuste de calidad</td><td class="r">15</td><td class="r">Q3,750</td><td class="r">100.0%</td><td>Validar parámetros</td></tr></table></div></div><div class="box full"><h4>Trazabilidad requerida</h4><div class="tbw"><table class="tb"><tr><th>Para cada parada no programada</th><th>Se registra</th></tr><tr><td>Evento</td><td>Fecha, hora y descripción</td></tr><tr><td>Equipo</td><td>Código y nombre del equipo</td></tr><tr><td>Orden</td><td>Número de orden de trabajo</td></tr><tr><td>Causa</td><td>Causa estandarizada</td></tr><tr><td>Recurso</td><td>Personal y/o servicio involucrado</td></tr></table></div></div></div></div><div class="dpanel" id="d3" role="tabpanel"><span class="dtag">Escenario ilustrativo, no pronóstico</span><div class="kpis"><div class="kpi "><small>Horas recuperables / mes</small><b>48 h</b></div><div class="kpi "><small>Horas con demanda validada</small><b>30 h</b></div><div class="kpi good"><small>Beneficio recurrente / mes</small><b>Q24,000</b></div><div class="kpi "><small>Recuperación simple</small><b>2 meses</b></div></div><div class="dg"><div class="box"><h4>De la mejora técnica al negocio</h4><div class="fr"><span><b>120 h</b> · Paradas no programadas</span><i style="width:100%;background:#D9606A"></i></div><div class="fr"><span><b>48 h</b> · Recuperación técnica estimada</span><i style="width:40%;background:#E9B44C"></i></div><div class="fr"><span><b>30 h</b> · Capacidad con demanda</span><i style="width:25%;background:#2AA7A3"></i></div><p class="n"><b>18 h</b> liberadas aún sin monetizar.</p></div><div class="box"><h4>Composición del beneficio mensual</h4><div class="hb"><span>Margen incremental</span><i style="width:100%;background:#2AA7A3"></i><em>Q18,000</em></div><div class="hb"><span>Gasto evitable</span><i style="width:33.3%;background:#2F80D9"></i><em>Q6,000</em></div><div class="tot"><small>Total beneficio mensual</small><b>Q24,000</b></div><div class="tot bad"><small>Costo de capacidad liberada</small><b>Q12,000</b><small>No sumar al beneficio</small></div></div><div class="box full"><h4>Supuestos del escenario</h4><div class="tbw"><table class="tb"><tr><th>Concepto</th><th class="r">Valor</th></tr><tr><td>Producción adicional vendible</td><td class="r">30,000 frascos/mes</td></tr><tr><td>Tasa incremental</td><td class="r">1,000 frascos/h</td></tr><tr><td>Margen de contribución unitario</td><td class="r">Q0.60</td></tr><tr><td>Inversión inicial</td><td class="r">Q48,000</td></tr><tr><td>Beneficio mensual estimado</td><td class="r">Q24,000</td></tr></table></div></div><div class="box full"><h4>Próximas decisiones clave</h4><div class="dec"><div><h5>1 · Validar recuperación técnica</h5><p>Confirmar en planta las 48 h de recuperación estimada y su sostenibilidad.</p><ul><li>Analizar causas y contramedidas</li><li>Ejecutar prueba de estabilidad</li><li>Validar horas recuperadas</li></ul></div><div><h5>2 · Confirmar demanda y cuello de botella</h5><p>Asegurar la demanda de 30 h/mes y verificar que no exista otro cuello de botella.</p><ul><li>Validar órdenes o forecast</li><li>Revisar restricciones aguas abajo</li><li>Confirmar capacidad de despacho</li></ul></div></div></div></div><p class="src">Margen neto de costos variables adicionales; gasto evitable separado, sin duplicidades. Recuperación simple = inversión / beneficio mensual.</p></div>
 <div class="case"><div class="nums"><div><b>+20%</b><span>producción</span></div><div><b>−25%</b><span>tiempo de parada</span></div><p>Caso de éxito en una planta de empaques, presentado por el proveedor de la solución.</p></div>
 <div class="story"><h3>Antes y después</h3><ul class="checks"><li>Antes: reportes manuales, datos poco precisos y sin visibilidad en tiempo real</li><li>Después: reportes más ágiles y decisiones con información al instante</li><li>Resultado: más producción con los mismos recursos</li></ul></div></div>
 <div class="fin"><div><h2 style="font-size:clamp(26px,3.4vw,38px)">De la mejora operativa al impacto económico</h2>
@@ -168,6 +222,10 @@ details[open] summary::after{transform:rotate(45deg)}details p{margin-top:12px;c
 <div class="steps3"><div><span class="k">1</span><h3>Diagnóstico</h3><p>Entendemos su negocio, su planta y la madurez de personas, procesos, datos y tecnología.</p></div>
 <div><span class="k">2</span><h3>Piloto</h3><p>Una línea o una máquina crítica, con indicadores acordados y línea base comparable.</p></div>
 <div><span class="k">3</span><h3>Escala</h3><p>Con resultados a la vista, se extiende a más líneas y se integra con su ERP.</p></div></div></div></section>
+<section class="alt" id="articulos"><div class="wrap"><h2>Artículos de interés</h2>
+<p class="lead">Ideas prácticas para la manufactura guatemalteca: datos de planta, gestión del cambio y decisiones financieras.</p>
+<div class="arts"><article class="art"><small>Próximamente</small><h3>Primer artículo</h3><p>Este espacio se completa con el contenido que defina Human Technologies.</p></article><article class="art"><small>Próximamente</small><h3>Segundo artículo</h3><p>Este espacio se completa con el contenido que defina Human Technologies.</p></article><article class="art"><small>Próximamente</small><h3>Tercer artículo</h3><p>Este espacio se completa con el contenido que defina Human Technologies.</p></article></div>
+<a class="btn" style="margin-top:28px" href="#contacto">Contáctenos</a></div></section>
 <section class="big" id="humantechnologies"><div class="wrap"><h2>La transformación primero es humana, después digital.</h2>
 <p>Human Technologies es la firma de transformación digital para la manufactura guatemalteca: tecnología, gestión del cambio y liderazgo para que la mejora se sostenga, porque las personas la usan.</p>
 <a class="btn ghost" href="https://www.thehumantechnologies.com">Conozca Human Technologies</a></div></section>
@@ -177,28 +235,10 @@ details[open] summary::after{transform:rotate(45deg)}details p{margin-top:12px;c
 <label>Principal reto<textarea name="reto"></textarea></label><label>Teléfono o correo<input required name="contacto" autocomplete="email"></label>
 <button class="btn" type="submit">Solicitar diagnóstico</button></form>
 <div class="ok" id="ok"><h3>Solicitud recibida</h3><p>Prototipo: el formulario aún no está conectado.</p></div></div></div></section><script>
-function scene(m){var h=m==='happy';
-var c={bg:h?'#EAF3FC':'#C5CDD6',fl:h?'#CFE0F2':'#98A3AF',belt:h?'#1E73BE':'#69747F',mach:h?'#1E73BE':'#78848F',lamp:h?'#6AC14C':'#D0584A',skin:'#F1C9A5'};
-var ws=[{x:250,v:h?'#6AC14C':'#5A6571'},{x:420,v:h?'#FFFFFF':'#505B66'},{x:590,v:h?'#6AC14C':'#5A6571'}];
-var s='<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="'+(h?'Equipo contento trabajando con datos al instante':'Equipo cansado trabajando con papeles y retrasos')+'">';
-s+='<rect width="800" height="450" fill="'+c.bg+'"/><rect y="330" width="800" height="120" fill="'+c.fl+'"/>';
-s+='<rect x="520" y="120" width="240" height="180" rx="14" fill="'+c.mach+'"/><circle cx="548" cy="148" r="11" fill="'+c.lamp+'"/><rect x="580" y="140" width="150" height="16" rx="8" fill="#fff" opacity=".35"/>';
-s+='<rect x="30" y="296" width="740" height="26" rx="8" fill="'+c.belt+'"/>';
-var nb=h?5:2;for(var i=0;i<nb;i++){var bx=h?60+i*130:140+i*330;s+='<rect x="'+bx+'" y="262" width="62" height="36" rx="5" fill="'+(h?'#fff':'#B9C2CC')+'"/>';}
-if(h){s+='<rect x="60" y="70" width="220" height="130" rx="12" fill="#fff"/><rect x="80" y="150" width="26" height="36" rx="4" fill="#6AC14C"/><rect x="118" y="130" width="26" height="56" rx="4" fill="#6AC14C"/><rect x="156" y="108" width="26" height="78" rx="4" fill="#6AC14C"/><rect x="194" y="92" width="26" height="94" rx="4" fill="#1E73BE"/><path d="M80 120l40-22 40 10 60-26" stroke="#1E73BE" stroke-width="4" fill="none" stroke-linecap="round"/>';}
-else{s+='<g fill="#fff" opacity=".92"><rect x="70" y="90" width="90" height="116" rx="4" transform="rotate(-8 115 148)"/><rect x="130" y="78" width="90" height="116" rx="4" transform="rotate(6 175 136)"/><rect x="100" y="110" width="90" height="116" rx="4" transform="rotate(-2 145 168)"/></g><g stroke="#98A3AF" stroke-width="3"><path d="M110 140h60M110 156h50M150 130h50M150 148h44M120 170h60"/></g><rect x="210" y="360" width="60" height="40" rx="4" fill="#fff" opacity=".8" transform="rotate(14 240 380)"/><rect x="520" y="372" width="70" height="44" rx="4" fill="#fff" opacity=".8" transform="rotate(-10 555 394)"/>';}
-ws.forEach(function(w,i){var x=w.x,tilt=h?0:(i%2?-7:7);
-s+='<g transform="rotate('+tilt+' '+x+' 330)"><rect x="'+(x-34)+'" y="214" width="68" height="120" rx="26" fill="'+w.v+'"/>';
-s+='<circle cx="'+x+'" cy="186" r="27" fill="'+c.skin+'"/><path d="M'+(x-27)+' 182a27 27 0 0154 0z" fill="'+(h?'#1E73BE':'#3C4650')+'"/>';
-if(h){s+='<circle cx="'+(x-9)+'" cy="188" r="3" fill="#1F2933"/><circle cx="'+(x+9)+'" cy="188" r="3" fill="#1F2933"/><path d="M'+(x-11)+' 198q11 12 22 0" stroke="#1F2933" stroke-width="3" fill="none" stroke-linecap="round"/>';}
-else{s+='<path d="M'+(x-14)+' 189h10M'+(x+4)+' 189h10" stroke="#1F2933" stroke-width="3" stroke-linecap="round"/><path d="M'+(x-10)+' 205q10-9 20 0" stroke="#1F2933" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M'+(x-16)+' 177l11 4M'+(x+16)+' 177l-11 4" stroke="#1F2933" stroke-width="2.5" stroke-linecap="round"/>';}
-s+='</g>';});
-if(h){s+='<rect x="446" y="248" width="40" height="28" rx="4" fill="#fff" stroke="#1E73BE" stroke-width="3"/><path d="M452 266l8-8 6 5 12-10" stroke="#6AC14C" stroke-width="3" fill="none" stroke-linecap="round"/>';}
-return s+'</svg>';}
 (function(){var b=document.getElementById('lb'),a=document.getElementById('la');
-/* PARA PRODUCCIÓN: reemplace estas dos escenas por <img src="equipo-cansado.jpg"> y <img src="equipo-contento.jpg"> */
-b.innerHTML=scene('tired');a.innerHTML=scene('happy');
-var box=document.getElementById('cmp');function set(p){p=Math.max(4,Math.min(96,p));box.style.setProperty('--pos',p+'%');box.setAttribute('aria-valuenow',Math.round(p));}
+
+b.innerHTML='<img src="img/hero-antes.jpg" alt="Analista y supervisor agobiados entre pilas de papeles y una calculadora, con la línea de producción detrás">';a.innerHTML='<img src="img/hero-despues.jpg" alt="Los mismos dos compañeros revisando juntos un tablero de indicadores en una tablet, con la línea fluyendo">';
+var box=document.getElementById('cmp');function set(p){p=Math.max(4,Math.min(96,p));box.style.setProperty('--pos',p+'%');box.dataset.side=p>=50?'l':'r';box.setAttribute('aria-valuenow',Math.round(p));}
 function mv(e){var r=box.getBoundingClientRect();set((e.clientX-r.left)/r.width*100)}
 var down=false;box.addEventListener('pointerdown',function(e){down=true;box.setPointerCapture(e.pointerId);mv(e)});
 box.addEventListener('pointermove',function(e){if(down)mv(e)});box.addEventListener('pointerup',function(){down=false});
@@ -209,5 +249,24 @@ box.addEventListener('pointerdown',function(){t=1});set(50);})();
 (function(){var h=document.getElementById('h'),c=document.getElementById('c'),p=document.getElementById('p');
 function f(n){return Math.round(n).toLocaleString('es-GT')}
 function u(){var t=(+h.value||0)*52*(+c.value||0);document.getElementById('pv').textContent=p.value;document.getElementById('t').textContent=f(t);document.getElementById('r').textContent=f(t*p.value/100)}
-[h,c,p].forEach(function(e){e.addEventListener('input',u)});u()})();</script></main><footer><div class="wrap"><span>© Human Technologies · Guatemala. Todos los derechos reservados.</span><a href="https://www.thehumantechnologies.com">thehumantechnologies.com</a></div></footer>
-<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'});</script></body></html>
+[h,c,p].forEach(function(e){e.addEventListener('input',u)});u()})();(function(){var t=[].slice.call(document.querySelectorAll('.tab')),p=[].slice.call(document.querySelectorAll('.dpanel'));t.forEach(function(b){b.addEventListener('click',function(){t.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});p.forEach(function(d){d.classList.toggle('on',d.id===b.dataset.d)})})})})();</script></main><footer><div class="wrap"><span>© Human Technologies · Guatemala. Todos los derechos reservados.</span><a href="https://www.thehumantechnologies.com">thehumantechnologies.com</a></div></footer>
+<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'});</script><script>(function(){var t=document.getElementById('trk'),c=document.getElementById('cnt'),n=t.children.length,box=t.parentNode,timer=null,hold=false,inview=false,
+still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function w(){return t.children[0].getBoundingClientRect().width+18}
+function idx(){if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4)return n-1;return Math.min(n-1,Math.round(t.scrollLeft/w()))}
+function u(){c.textContent=(idx()+1)+' / '+n}
+function vis(){return Math.max(1,Math.floor(t.clientWidth/w()+.25))}
+function stop(){clearTimeout(timer);timer=null}
+function plan(){stop();if(still||hold||!inview||idx()>=n-1)return;
+ var ms=(vis()===1&&window.innerWidth<=800?3800:4200)*vis();
+ timer=setTimeout(function(){t.scrollBy({left:w()});setTimeout(plan,900)},ms)}
+function touch(){stop();clearTimeout(touch.r);touch.r=setTimeout(plan,1200)}
+document.getElementById('pv2').onclick=function(){t.scrollBy({left:-w()});touch()};
+document.getElementById('nx2').onclick=function(){t.scrollBy({left:w()});touch()};
+['pointerdown','touchstart','wheel'].forEach(function(ev){t.addEventListener(ev,touch,{passive:true})});
+t.addEventListener('keydown',function(e){if(e.key==='ArrowRight')t.scrollBy({left:w()});if(e.key==='ArrowLeft')t.scrollBy({left:-w()});touch()});
+t.addEventListener('scroll',u,{passive:true});
+box.addEventListener('mouseenter',function(){hold=true;stop()});box.addEventListener('mouseleave',function(){hold=false;plan()});
+box.addEventListener('focusin',function(){hold=true;stop()});box.addEventListener('focusout',function(){hold=false;plan()});
+if('IntersectionObserver' in window){new IntersectionObserver(function(x){inview=x[0].isIntersecting;inview?plan():stop()},{threshold:.5}).observe(box)}
+window.addEventListener('resize',u);u()})();</script></body></html>

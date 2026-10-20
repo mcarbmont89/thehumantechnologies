@@ -257,7 +257,7 @@ function idx(){if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4)return n-1;return 
 function u(){c.textContent=(idx()+1)+' / '+n}
 function vis(){return Math.max(1,Math.floor(t.clientWidth/w()+.25))}
 function stop(){clearTimeout(timer);timer=null}
-function plan(){stop();if(still||hold||!inview||idx()>=n-1)return;
+function plan(){stop();if(hold||!inview||idx()>=n-1)return;
  var ms=(vis()===1&&window.innerWidth<=800?3800:4200)*vis();
  timer=setTimeout(function(){t.scrollBy({left:w()});setTimeout(plan,900)},ms)}
 function touch(){stop();clearTimeout(touch.r);touch.r=setTimeout(plan,1200)}
@@ -268,5 +268,5 @@ t.addEventListener('keydown',function(e){if(e.key==='ArrowRight')t.scrollBy({lef
 t.addEventListener('scroll',u,{passive:true});
 box.addEventListener('mouseenter',function(){hold=true;stop()});box.addEventListener('mouseleave',function(){hold=false;plan()});
 box.addEventListener('focusin',function(){hold=true;stop()});box.addEventListener('focusout',function(){hold=false;plan()});
-if('IntersectionObserver' in window){new IntersectionObserver(function(x){inview=x[0].isIntersecting;inview?plan():stop()},{threshold:.5}).observe(box)}
+if('IntersectionObserver' in window){new IntersectionObserver(function(x){inview=x[0].isIntersecting;inview?plan():stop()},{threshold:.15}).observe(box)}
 window.addEventListener('resize',u);u()})();</script></body></html>

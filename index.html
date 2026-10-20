@@ -272,7 +272,7 @@ box.addEventListener('mouseenter',function(){hold=true;stop()});box.addEventList
 box.addEventListener('focusin',function(){hold=true;stop()});box.addEventListener('focusout',function(){hold=false;plan()});
 if('IntersectionObserver' in window){new IntersectionObserver(function(x){inview=x[0].isIntersecting;inview?plan():stop()},{threshold:.15}).observe(box)}
 window.addEventListener('resize',u);u()})();</script><script>/* Artículos: pegue aquí la dirección de la app de artículos (sin barra final). Vacío = se muestran las tarjetas "Próximamente". */
-(function(){var FEED_BASE='https://thehumantechnologies-articulos.vercel.app';if(!FEED_BASE||!window.fetch)return;var box=document.getElementById('arts');
+(function(){var FEED_BASE='https://articulos.xd.com.gt';if(!FEED_BASE||!window.fetch)return;var box=document.getElementById('arts');
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 fetch(FEED_BASE+'/feed.json?limit=3').then(function(r){return r.ok?r.json():{items:[]}}).then(function(d){var it=(d&&d.items)||[];if(!it.length)return;box.textContent='';
 it.forEach(function(a){var c=el('a','art live');c.href=a.url;if(a.image){var i=el('img');i.src=a.image;i.alt=a.imageAlt||'';i.loading='lazy';c.appendChild(i)}

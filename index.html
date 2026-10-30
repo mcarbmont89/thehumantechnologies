@@ -5,10 +5,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
 --brand:#1E73BE;--green:#6AC14C;--green-ink:#3E8A22;--bg:#FAFCFE;--surface:#FFFFFF;--soft:#E7F2FA;--ink:#1F2933;--muted:#52606D;--line:#D8E4F1}
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+html{background:var(--brand);scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
 h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
 p{margin:0}a{color:inherit}
@@ -54,7 +54,7 @@ input,select,textarea{font:inherit;font-weight:400;color:var(--ink);background:v
 textarea{min-height:90px;resize:vertical}form .btn{width:100%}
 .ok{display:none;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:40px 30px;text-align:center}.ok h3{font-size:28px;margin-bottom:8px}
 @media(max-width:900px){.contact .grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
-footer{background:var(--brand);color:#EAF3FC;padding:34px 0;font-size:14px}
+footer{background:var(--brand);color:#EAF3FC;padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:#fff}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 

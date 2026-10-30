@@ -180,6 +180,7 @@ details[open] summary::after{transform:rotate(45deg)}details p{margin-top:12px;c
 .dec ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px}
 .dec li::before{content:"✓";color:var(--green-ink);font-weight:700;margin-right:8px}
 .src{font-size:12.5px;color:var(--muted);margin-top:14px}
+.ferr{color:#B4432F;font-size:14.5px}.ferr a{color:#B4432F;font-weight:600}
 .wide{max-width:28ch}
 .kick{display:block;font-weight:600;color:var(--brand);margin-bottom:14px}
 .two{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:44px}
@@ -268,8 +269,10 @@ details[open] summary::after{transform:rotate(45deg)}details p{margin-top:12px;c
 <form id="f"><div class="row"><label>Nombre<input required name="nombre" autocomplete="name"></label><label>Empresa<input required name="empresa" autocomplete="organization"></label></div>
 <div class="row"><label>Sector industrial<select name="sector"><option>Alimentos y bebidas</option><option>Plásticos</option><option>Farmacéutico</option><option>Papel, cartón y empaques</option><option>Textil y vestuario</option><option>Químicos y productos de consumo</option><option>Otro</option></select></label><label>Cargo<input name="cargo" autocomplete="organization-title"></label></div>
 <label>Principal reto<textarea name="reto"></textarea></label><label>Teléfono o correo<input required name="contacto" autocomplete="email"></label>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+<p class="ferr" id="ferr" role="alert" hidden>No pudimos enviar su solicitud. Por favor intente de nuevo o escríbanos a <a href="mailto:info@thehumantechnologies.com">info@thehumantechnologies.com</a>.</p>
 <button class="btn" type="submit">Solicitar diagnóstico</button></form>
-<div class="ok" id="ok"><h3>Solicitud recibida</h3><p>Prototipo: el formulario aún no está conectado.</p></div></div></div></section><script>
+<div class="ok" id="ok"><h3>Solicitud recibida</h3><p>Gracias por escribirnos. Le responderemos para coordinar el diagnóstico.</p></div></div></div></section><script>
 (function(){var b=document.getElementById('lb'),a=document.getElementById('la');
 
 b.innerHTML='<img src="img/hero-antes.jpg" alt="Analista y supervisor agobiados entre pilas de papeles y una calculadora, con la línea de producción detrás">';a.innerHTML='<img src="img/hero-despues.jpg" alt="Los mismos dos compañeros revisando juntos un tablero de indicadores en una tablet, con la línea fluyendo">';
@@ -285,7 +288,14 @@ box.addEventListener('pointerdown',function(){t=1});set(50);})();
 function f(n){return Math.round(n).toLocaleString('es-GT')}
 function u(){var t=(+h.value||0)*52*(+c.value||0);document.getElementById('pv').textContent=p.value;document.getElementById('t').textContent=f(t);document.getElementById('r').textContent=f(t*p.value/100)}
 [h,c,p].forEach(function(e){e.addEventListener('input',u)});u()})();(function(){var t=[].slice.call(document.querySelectorAll('.tab')),p=[].slice.call(document.querySelectorAll('.dpanel'));t.forEach(function(b){b.addEventListener('click',function(){t.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});p.forEach(function(d){d.classList.toggle('on',d.id===b.dataset.d)})})})})();</script></main><footer><div class="wrap"><span>© Human Technologies · Guatemala. Todos los derechos reservados.</span><a href="https://www.thehumantechnologies.com">thehumantechnologies.com</a></div></footer>
-<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('ok').style.display='block'});</script><script>(function(){var t=document.getElementById('trk'),c=document.getElementById('cnt'),n=t.children.length,box=t.parentNode,timer=null,hold=false,inview=false,
+<script>(function(){var f=document.getElementById('f'),ok=document.getElementById('ok'),err=document.getElementById('ferr'),btn=f.querySelector('button[type=submit]'),label=btn.textContent;
+f.addEventListener('submit',function(e){e.preventDefault();if(f.elements._honey.value)return;
+var d=new FormData(f);d.append('_subject','Solicitud de diagnóstico desde la landing de Human Technologies');d.append('_template','table');d.append('_captcha','false');
+btn.disabled=true;btn.textContent='Enviando';err.hidden=true;
+fetch('https://formsubmit.co/ajax/info@thehumantechnologies.com',{method:'POST',headers:{'Accept':'application/json'},body:d})
+.then(function(r){return r.json().then(function(j){if(!r.ok||j.success===false||j.success==='false')throw new Error('envio')})})
+.then(function(){f.style.display='none';ok.style.display='block'})
+.catch(function(){btn.disabled=false;btn.textContent=label;err.hidden=false})})})();</script><script>(function(){var t=document.getElementById('trk'),c=document.getElementById('cnt'),n=t.children.length,box=t.parentNode,timer=null,hold=false,inview=false,
 still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function w(){return t.children[0].getBoundingClientRect().width+18}
 function idx(){if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4)return n-1;return Math.min(n-1,Math.round(t.scrollLeft/w()))}
